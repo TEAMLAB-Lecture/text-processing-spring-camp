@@ -1,3 +1,5 @@
+
+
 #######################
 # Test Processing I   #
 #######################
@@ -35,7 +37,7 @@ def normalize(input_string):
     """
     input_string = input_string.strip()
     while "  " in input_string:
-        input_string.replace("  ", " ")
+        input_string = input_string.replace("  ", " ")
     normalized_string = input_string.lower()
     return normalized_string
 

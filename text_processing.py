@@ -1,3 +1,5 @@
+
+
 #######################
 # Test Processing I   #
 #######################
@@ -33,7 +35,10 @@ def normalize(input_string):
              >>> tp.normalize(input_string2)
              'extra space'
     """
-    normalized_string = None
+    input_string = input_string.strip()
+    while "  " in input_string:
+        input_string = input_string.replace("  ", " ")
+    normalized_string = input_string.lower()
     return normalized_string
 
 
@@ -58,5 +63,14 @@ def no_vowels(input_string):
             >>> tp.normalize(input_string2)
             ''W lv Pythn!'
     """
-    no_vowel_string = None
+    input_string = input_string.replace('a', '')
+    input_string = input_string.replace('e', '')
+    input_string = input_string.replace('i', '')
+    input_string = input_string.replace('o', '')
+    input_string = input_string.replace('u', '')
+    input_string = input_string.replace('A', '')
+    input_string = input_string.replace('E', '')
+    input_string = input_string.replace('I', '')
+    input_string = input_string.replace('O', '')
+    no_vowel_string = input_string.replace('U', '')
     return no_vowel_string
